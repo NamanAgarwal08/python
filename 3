@@ -1,0 +1,87 @@
+#Vowels and Consonents.
+'''x=input("Enter any alphabet\n")
+if(x=='a' or x=='e' or x=='i' or x=='o' or x=='u' or x=='A' or x=='E' or x=='I' or x=='O' or x=='U'):
+print("Vowels")
+else:
+print("Consonent")'''
+
+#greatest among two numbers.
+'''a=int(input("Enter first number\n"))
+b=int(input("Enter second number\n"))
+if (a>b):
+print("\nGreater number is %d"%a)
+else:
+print("\nGreater number is %d"%b)'''
+
+#Odd Even Number.
+'''a=int(input("Enter a number\n"))
+if(a%2 == 0):
+print("Even")
+else:
+print("Odd")'''
+
+#Odd Even with Bitwise operator.
+'''a=int(input("Enter a number\n"))
+if (a&1 == 1):
+print("Odd")
+else :
+print("Even")'''
+
+#Largest number among three numbers.
+'''a=int(input("Enter first number\n"))
+b=int(input("Enter second number\n"))
+c=int(input("Enter third number\n"))
+print("Greatest number is %d"%max(a,b,c))'''
+
+#Input all sides of triangle and check whether the triangle can be formed or not.
+'''a=int(input("Enter first side\n"))
+b=int(input("Enter second side\n"))
+c=int(input("Enter third side\n"))
+if ((a+b) > c and (b+c) > a and (c+a) >b) :
+print("Triangle can be formed with the given parameters")
+else :
+print("Triangle cannot be formed with the given parameters")'''
+
+#Input all angles of triangle and check whether the triangle can be formed or not.
+'''a=int(input("Enter first angle\n"))
+b=int(input("Enter second angle\n"))
+c=int(input("Enter third angle\n"))
+if (a+b+c == 180) :
+print("Triangle can be formed with the given parameters")
+else :
+print("Triangle cannot be formed with the given parameters")'''
+
+#Calculate the profit and loss percentage where the selling price and cost price is given by the user.
+'''cp=float(input("Enter the cost price of the product\n"))
+sp=float(input("Enter the selling price of the product\n"))
+gain = sp-cp
+if (gain > 0) :
+print("Gain percentage = %.2f%%"%((gain/cp)*100))
+elif (gain < 0) :
+print("Loss percentage = %.2f%%"%((-gain/cp)*100))
+elif (gain == 0) :
+print("No profit and No Loss")'''
+
+#Check whether the input number is divisible by both 5 and 11 or not.
+'''a=int(input("Enter the number\n"))
+if ( a%5 == 0 and a%11 == 0) :
+print("This number is divisible by both 5 and 11")
+else :
+print("This number is not divisible by both 5 and 11")'''
+
+#Salary.
+'''bs=float(input("Enter the base salary of the employee\n"))
+if (bs <= 10000) :
+print("Total Salary = %.2f"%(bs+(20/100)*bs+(80/100)*bs))
+elif (bs > 10000 and bs <= 20000) :
+print("Total Salary = %.2f"%(bs+(25/100)*bs+(85/100)*bs))
+else :
+print("Total Salary = %.2f"%(bs+(30/100)*bs+(95/100)*bs))'''
+
+#Apples in 7-7 groups no apple left.
+a=int(input("Enter the number of apples\n"))
+if ( a%7==0 and a%6==1 and a%5==1 and a%4==1 and a%3==1) :
+print("Valid")
+else :
+print("Invalid")
+
