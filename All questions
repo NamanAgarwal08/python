@@ -1,0 +1,361 @@
+'''h=int(input("Enter the number of heads\n"))
+l=int(input("Enter the number of legs\n"))
+r=(l/2)-h
+c=(2*h)-(l/2)
+print("Number of Chickens = %d\nNumber of Rabbits = %d"%(c,r))'''
+
+# With using third variable.
+'''a=int(input("Enter a number\n"))
+b=int(input("Enter another number\n"))
+print("Before swapping :\na = %d\nb = %d"%(a,b))
+c=a
+a=b
+b=c
+print("After swapping :\na = %d\nb = %d"%(a,b))'''
+
+# Without using third variable and any other variable.
+'''a=int(input("Enter a number\n"))
+b=int(input("Enter another number\n"))
+print("Before swapping :\na = %d\nb = %d"%(a,b))
+a,b=b,a
+print("After swapping :\na = %d\nb = %d"%(a,b))'''
+
+# With using bitwise operator.
+'''a=int(input("Enter a number\n"))
+b=int(input("Enter another number\n"))
+print("Before swapping :\na = %d\nb = %d"%(a,b))
+a=a^b
+b=a^b
+a=a^b
+print("After swapping :\na = %d\nb = %d"%(a,b))'''
+
+
+
+# 1. WAP in python to find out BMI.
+'''m=float(input("Enter the mass in kilogram:\n"))
+h=float(input("Enter the height in meters:\n"))
+bmi=m/(h**2)
+print("BMI = %f"%bmi)'''
+
+# 2. WAP in python to multiply a number by 32 without using multiplication operator.
+'''n=int(input("Enter the number to multiply it by 32:\n"))
+m=n<<5
+print("Answer = %d"%m)'''
+
+# 3. WAP in python to multiply a number by 65 without using multiplication operator.
+'''n=int(input("Enter the number to multiply it by 65:\n"))
+m=(n<<6)+n
+print("Answer = %d"%m)'''
+
+# 4. WAP in python to find out whether a number is odd or even using bitwise operator only.
+'''n=int(input("Enter the number to find whether the number is even or odd:\n"))
+oe=n&1
+if(oe == 1):
+print("The number is odd")
+else:
+print("The number is even")'''
+
+# 5. WAP in python to enter two coordinates by the user and find the distance between the coordinates.
+'''x1=float(input("Enter the value of x1:\n"))
+y1=float(input("Enter the value of y1:\n"))
+x2=float(input("Enter the value of x2:\n"))
+y2=float(input("Enter the value of y2:\n"))
+x3=(x2-x1)**2
+y3=(y2-y1)**2
+print("Distance between the coordinates is %f"%((x3+y3)**(1/2)))'''
+
+# 6. WAP in python to enter height and base from the user and find the hypotenuse.
+b=float(input("Enter the base length of the triangle:\n"))
+h=float(input("Enter the height of the triangle:\n"))
+print("Hypotenuse of triangle = %.2f"%((b**2)+(h**2))**(1/2))
+
+
+
+#Vowels and Consonents.
+'''x=input("Enter any alphabet\n")
+if(x=='a' or x=='e' or x=='i' or x=='o' or x=='u' or x=='A' or x=='E' or x=='I' or x=='O' or x=='U'):
+print("Vowels")
+else:
+print("Consonent")'''
+
+#greatest among two numbers.
+'''a=int(input("Enter first number\n"))
+b=int(input("Enter second number\n"))
+if (a>b):
+print("\nGreater number is %d"%a)
+else:
+print("\nGreater number is %d"%b)'''
+
+#Odd Even Number.
+'''a=int(input("Enter a number\n"))
+if(a%2 == 0):
+print("Even")
+else:
+print("Odd")'''
+
+#Odd Even with Bitwise operator.
+'''a=int(input("Enter a number\n"))
+if (a&1 == 1):
+print("Odd")
+else :
+print("Even")'''
+
+#Largest number among three numbers.
+'''a=int(input("Enter first number\n"))
+b=int(input("Enter second number\n"))
+c=int(input("Enter third number\n"))
+print("Greatest number is %d"%max(a,b,c))'''
+
+#Input all sides of triangle and check whether the triangle can be formed or not.
+'''a=int(input("Enter first side\n"))
+b=int(input("Enter second side\n"))
+c=int(input("Enter third side\n"))
+if ((a+b) > c and (b+c) > a and (c+a) >b) :
+print("Triangle can be formed with the given parameters")
+else :
+print("Triangle cannot be formed with the given parameters")'''
+
+#Input all angles of triangle and check whether the triangle can be formed or not.
+'''a=int(input("Enter first angle\n"))
+b=int(input("Enter second angle\n"))
+c=int(input("Enter third angle\n"))
+if (a+b+c == 180) :
+print("Triangle can be formed with the given parameters")
+else :
+print("Triangle cannot be formed with the given parameters")'''
+
+#Calculate the profit and loss percentage where the selling price and cost price is given by the user.
+'''cp=float(input("Enter the cost price of the product\n"))
+sp=float(input("Enter the selling price of the product\n"))
+gain = sp-cp
+if (gain > 0) :
+print("Gain percentage = %.2f%%"%((gain/cp)*100))
+elif (gain < 0) :
+print("Loss percentage = %.2f%%"%((-gain/cp)*100))
+elif (gain == 0) :
+print("No profit and No Loss")'''
+
+#Check whether the input number is divisible by both 5 and 11 or not.
+'''a=int(input("Enter the number\n"))
+if ( a%5 == 0 and a%11 == 0) :
+print("This number is divisible by both 5 and 11")
+else :
+print("This number is not divisible by both 5 and 11")'''
+
+#Salary.
+'''bs=float(input("Enter the base salary of the employee\n"))
+if (bs <= 10000) :
+print("Total Salary = %.2f"%(bs+(20/100)*bs+(80/100)*bs))
+elif (bs > 10000 and bs <= 20000) :
+print("Total Salary = %.2f"%(bs+(25/100)*bs+(85/100)*bs))
+else :
+print("Total Salary = %.2f"%(bs+(30/100)*bs+(95/100)*bs))'''
+
+#Apples in 7-7 groups no apple left.
+a=int(input("Enter the number of apples\n"))
+if ( a%7==0 and a%6==1 and a%5==1 and a%4==1 and a%3==1) :
+print("Valid")
+else :
+print("Invalid")
+
+
+'''Assignment 1
+    Ques 1 :
+    1) fromkeys()
+    2) setdefault()
+   
+    Ques 2:
+    Write a program to count the frequency of each character of each character inb given string accepted from the user using dictionary.
+   
+    Ques 3:
+    Write a program to display the name of all employees whose salary is more than 25000 using nested dictionary.
+'''
+'''d={1:2,3:4,5:6}
+for i in d:
+    print(i) # to print keys
+    print(d[i]) # to print values
+print()
+for i in d.keys(): # to print keys
+    print(i)
+print()    
+for i in d.values(): # to print values
+    print(i)
+print()
+for i in d.items(): # to print items
+    print(i)            
+print()'''
+
+'''d={}
+for i in range (3):
+    x=int(input('Enter Key : '))
+    d1={}
+    y=int(input('Enter key for nested : '))
+    z=int(input('Enter value : '))
+    d1.update({y:z})
+    p=d1
+    d.update({x:p})
+print(d)
+'''
+
+# Ques: Enter the dict from the user and find the sum of vaules.
+# Ques: Enter the dict from the user and find the sum.
+# Ques: Enter two dictionary from the user and merge them in another dictionary.
+
+d={}
+lst=[]
+s=0
+n=int(input("Enter the number of elements to store in the dictionary : "))
+for i in range (n):
+    x=int(input("Enter the key : "))
+    y=int(input("Enter the value : "))
+    s=s+y
+    lst.append(y)
+    d.update({x:y})
+print(d)
+print("Sum = ",s)    
+lst.sort()
+print(lst)
+d1={}
+for i in range(n):
+    x=int(input("Enter the key : "))
+    y=int(input("Enter the value : "))
+    d1.update({x:y})
+d3={}
+d3.update(d)
+print(d3)
+
+
+'''ls=[1,-2,3,-4,5,-6]
+lst1=list(filter(lambda n:n>0,ls))
+print(lst1)'''
+
+'''ls=['dog','elephant','tiger']
+lst1=list(map(lambda b:b.upper(),ls))
+print(lst1)'''
+
+'''ls=[1,2,3,4,5]
+lst1=list(map(lambda n:n**3,ls))
+print(lst1)'''
+
+'''f=lambda x,y:x+y
+n=int(input("Enter number of terms : "))
+a=0
+b=1
+print(a,b,end=' ')
+for i in range(n-2):
+z=f(a,b)
+a=b
+b=z
+print(z,end=' ')'''
+
+'''import functools
+ls=[1,2,3,4,5,6,7,8,9,10]
+print(functools.reduce(lambda a,b:a+b,ls))'''
+
+
+# Function
+# 1) user defined
+# 2) built in
+
+# Things to remember:
+# 1) function declaration
+# 2) funbction definition
+# 3) function calling
+
+# Syntax:
+# def func_name(arg):can pass any sequence directly
+# sequence:list, string, tuple, dict, var, etc.
+# argument:always pass a variable
+# parameter:always pass a value
+
+#Declaring a function:
+#def fun():
+# print("Naman Agarwal")
+#fun()
+
+# Error:
+#fun()
+#def fun():
+# print("Naman Agarwal")
+
+#Note: We can declare a function anywhere in the program but before it's calling.
+
+
+'''def fun(num):
+return num*num
+x=fun(4)
+print(x)
+x=fun(4.2)
+print(x)'''
+
+
+# With default argument:
+'''def fun(num,num1=2):
+print(num*num)
+print(num1)
+fun(4)'''
+
+
+# With different arguments:
+'''def fun(num,num1):
+print(num*num)
+print(num1)
+fun(4,2)'''
+
+
+'''def fun(num,num1=2):
+print(num*num)
+print(num1)
+fun(4,7) #or fun(num=4,num1=7)'''
+
+
+# Passing a list in argument:
+'''def fun(num):
+print(num)
+lst=[1,2,3,4]
+fun(lst)'''
+
+
+# Operations between arguments in function:
+'''def cal(num,num1):
+a=num+num1
+b=num-num1
+c=num*num1
+d=num**num1
+e=num/num1
+f=num//num1
+return a,b,c,d,e,f # returns in the form of tuple
+x=eval(input())
+y=eval(input())
+n1,n2,n3,n4,n5,n6=cal(x,y)
+print(n1)
+print(n2)
+print(n3)
+print(n4)
+print(n5)
+print(n6)'''
+
+
+# Print first ten natural numbers using function:
+'''def natural():
+for i in range(10):
+print(i+1)
+natural()'''
+
+
+# Enter the list from the user and find the sum of its elements using function:
+'''def listsum(lst):
+l=len(lst)
+s=0
+for i in range(l):
+s=s+lst[i]
+return s
+lst=eval(input("Enter the list : "))
+listsum(lst)'''
+
+
+# Arbitrary arguments : If we pass the arguments more than the arguments defined in a function then the arguments passed are stored in the form of tuple.
+
+
+#Ques-1: Enter two numbers from the user and find the hamming distance using function.
+# Hamming : find exor of both numbers and count the number of ones.
