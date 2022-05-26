@@ -631,3 +631,156 @@ for i in range(len(lst1)):
 print(lst3)
 '''
 
+
+'''
+Ques-46: Count the frequency of each character in a string entered by the user and display it using dictionary.
+str1 = input('Enter any string :\n')
+lst1 = []
+lst2 = []
+for i in range(26):
+    lst1.append(0)              # for lower Case alphabets
+    lst2.append(0)              # for Upper Case alphabets
+for i in range(len(str1)):
+    for j in range(97, 123, 1): # range for lower case alphabets
+        if(ord(str1[i]) == j):
+            lst1[j-97] += 1
+    for j in range(65, 91, 1):  # range for upper case alphabets
+        if(ord(str1[i]) == j):
+            lst2[j-65] += 1
+dict1 = {}                      # for lower case alphabets
+dict2 = {}                      # for upper case alphabets
+for i in range(26):
+    if(lst1[i] != 0):
+        a = chr(i+97)
+        b = lst1[i]
+        dict1.update({a: b})
+    if(lst2[i] != 0):
+        a = chr(i+65)
+        b = lst2[i]
+        dict2.update({a: b})
+print('For lower Case Letters :', dict1)
+print('For upper Case Letters :', dict2)
+'''
+
+
+'''
+Ques-47: Write a program to display the name of all employees whose salary is more than 25000 using nested dictionary.
+n = int(input("Enter the number of employees :\n"))
+dict1 = {}
+for i in range(n):
+    a = i+1
+    dict2 = {}
+    b = input('Enter the name of employee %d : ' % (i+1))
+    c = eval(input('Enter salary : '))
+    print()
+    dict2.update({b: c})
+    dict1.update({a: dict2})
+print("For all employees :",dict1)
+print()
+for i in range(n):
+    for j in dict1[i+1].values():
+        if j<=25000:
+            dict1.pop(i+1)
+print("For salary more than 25000 :",dict1)
+'''
+
+
+'''
+Ques-48: Merge two nested dictionaries.
+dict1 = {}
+n = int(input("Enter the number of elements you want to store in dictionary 1 : "))
+for i in range(n):
+    print()
+    a = eval(input("Enter key %d : " % (i+1)))
+    dict3 = {}
+    b = eval(input("Enter nested key %d : " % (i+1)))
+    c = eval(input("Enter value : "))
+    dict3.update({b: c})
+    dict1.update({a: dict3})
+print()
+dict2 = {}
+m = int(input("Enter the number of elements you want to store in dictionary 2 : "))
+for i in range(m):
+    print()
+    a = eval(input("Enter key %d : " % (i+1)))
+    dict3 = {}
+    b = eval(input("Enter nested key %d : " % (i+1)))
+    c = eval(input("Enter value : "))
+    dict3.update({b: c})
+    dict2.update({a: dict3})
+print()
+print("Dictionary 1 = ", dict1)
+print("Dictionary 2 = ", dict2)
+print()
+dict3 = {}
+for i in dict1.keys():
+    dict3.update({i: dict1[i]})
+for i in dict2.keys():
+    dict3.update({i: dict2[i]})
+print("Merged Dictionary = ", dict3)
+'''
+
+
+'''
+Ques-49: Two nested dictionaries, first element of first dict and last element of second dict to add in third dictionary.
+dict1 = {}
+n = int(input("Enter the number of elements you want to store in dictionary 1 : "))
+for i in range(n):
+    print()
+    a = eval(input("Enter key %d : " % (i+1)))
+    dict3 = {}
+    b = eval(input("Enter nested key %d : " % (i+1)))
+    c = eval(input("Enter value : "))
+    dict3.update({b: c})
+    dict1.update({a: dict3})
+print()
+dict2 = {}
+m = int(input("Enter the number of elements you want to store in dictionary 2 : "))
+for i in range(m):
+    print()
+    a = eval(input("Enter key %d : " % (i+1)))
+    dict3 = {}
+    b = eval(input("Enter nested key %d : " % (i+1)))
+    c = eval(input("Enter value : "))
+    dict3.update({b: c})
+    dict2.update({a: dict3})
+print()
+print("Dictionary 1 = ", dict1)
+print("Dictionary 2 = ", dict2)
+print()
+dict3 = {}
+for i in dict1.keys():
+    dict3.update({i: dict1[i]})
+    break
+for i in dict2.keys():
+    continue
+dict3.update({i: dict2[i]})
+print("New Dictionary = ", dict3)
+'''
+
+
+'''
+Ques-50: Multiply all the elements of the tuple which are stored in dictionary as its value.
+dict1 = {}
+n = int(input("Enter the number of elements you want to store in dictionary : "))
+for i in range(n):
+    print()
+    a = eval(input("Enter key %d : " % (i+1)))
+    dict2 = {}
+    m = int(input("Enter the number of elements you want to insert in tuple : "))
+    tpl = ()
+    for j in range(m):
+        b = eval(input("Enter element %d : " % (j+1)))
+        tpl += b,
+    dict1.update({a: tpl})
+print()
+print("Dictionary = ", dict1)
+print()
+c = 0
+for i in dict1.values():
+    c += 1
+    p = 1
+    for j in range(len(i)):
+        p = p*i[j]
+    print("Product of elements in tuple %d = %d" % (c, p))
+'''
